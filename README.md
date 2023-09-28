@@ -1,8 +1,17 @@
 
-# Talk-A-Tive
+# Helpful Harbor
 
-Talk-a-tive is a Full Stack Chatting App.
-Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
+In our everyday lives, we often want to help others or make things better for our community. But sometimes, our busy schedules get in the way, and we can't do the good deeds we wish to. This app helps with that. It connects you with NGOs or groups of people who are ready to lend a hand.
+
+## My details
+```
+Name: Ayush Ranjan
+College: IIT (ISM) Dhanbad 
+Branch: BTech. Mining Machinery Engineering (Department of Mechanical Engineering)
+Admission Number of institute: 21JE0215
+Position: Software Engineer Intern
+
+```
 ## Tech Stack
 
 **Client:** React JS
@@ -10,24 +19,23 @@ Uses Socket.io for real time communication and stores user details in encrypted 
 **Server:** Node JS, Express JS
 
 **Database:** Mongo DB
-  
-## Demo
 
-https://talk-a-tive.herokuapp.com/
+**AI integration:** OpenAI
 
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
+**Video and Voice Calling:** Zegocloud
+
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/piyush-eon/mern-chat-app
+  git clone https://github.com/ayush-ranjan-official/Helpful-Harbor-An-AI-powered-chatting-app-
 ```
 
 Go to the project directory
 
 ```bash
-  cd mern-chat-app
+  cd Helpful-Harbor-An-AI-powered-chatting-app
 ```
 
 Install dependencies
@@ -38,8 +46,12 @@ Install dependencies
 
 ```bash
   cd frontend/
-  npm install
+  npm install --legacy-peer-deps
 ```
+
+Add two .env file, one in the root directory and other inside the frontend folder
+
+```I have provided the data for .env files in the System Design Document for the recruiting team, which I will delete later for security reasons.```
 
 Start the server
 
@@ -54,28 +66,7 @@ Start the Client
   npm start
 ```
 
-  
-# Features
-
-### Authenticaton
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/login.PNG)
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/signup.PNG)
-### Real Time Chatting with Typing indicators
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/real-time.PNG)
-### One to One chat
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/mainscreen.PNG)
-### Search Users
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/search.PNG)
-### Create Group Chats
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/new%20grp.PNG)
-### Notifications 
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
-### Add or Remove users from group
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/add%20rem.PNG)
-### View Other user Profile
-![](https://github.com/piyush-eon/mern-chat-app/blob/master/screenshots/profile.PNG)
 ## Made By
 
-- [@Piyush-eon](https://github.com/piyush-eon)
-
+- [@ayush-ranjan-official](https://github.com/ayush-ranjan-official)
   
