@@ -51,7 +51,7 @@ Install dependencies
 
 Add two .env file, one in the root directory and other inside the frontend folder
 
-```I have provided the data for .env files in the System Design Document for the recruiting team, which I will delete later for security reasons.```
+```I have provided the data for .env files in the System Design Document(at the end) for making the testing process for the recruiting team easier, which I will delete later for security reasons.```
 
 Start the server
 
