@@ -12,6 +12,19 @@ Admission Number of institute: 21JE0215
 Position: Software Engineer Intern
 
 ```
+## Features
+  **User registration and authentication**
+  
+  **Sending and receiving text messages between users.**
+  
+  **Group chat functionality.**
+  
+  **Real-time message updates.**
+  
+  **AI powered chatbot for user.**
+  
+  **Video calling or audio calling feature.**
+  
 ## Tech Stack
 
 **Client:** React JS
