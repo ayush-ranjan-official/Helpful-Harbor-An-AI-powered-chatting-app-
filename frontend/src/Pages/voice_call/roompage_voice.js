@@ -5,6 +5,7 @@ import { Button, Input, Box, Flex } from '@chakra-ui/react'
 const dotenv = require("dotenv");
 dotenv.config();
 
+//Creates a video call using zegocloud at that room
 const Roompage_voice = () => {
     const {roomId} = useParams();
 
