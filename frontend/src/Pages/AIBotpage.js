@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Spacer, Box, Center } from '@chakra-ui/react';
 import { Heading, Input, Button, ButtonGroup, BeatLoader, Flex } from '@chakra-ui/react';
 
+// Takes prompt as input, POST it to OpenAI and then display the response
 function AIpage() {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
