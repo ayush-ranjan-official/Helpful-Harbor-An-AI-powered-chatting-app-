@@ -17,6 +17,7 @@ dotenv.config();
 connectDB();
 const app = express();
 
+// OpenAI API integration
 app.use(express.json()); // to accept json data as we are taking input from fronten
 const port = 6000;
 app.use(bodyParser.json());
