@@ -8,7 +8,7 @@ import { Button, ButtonGroup, BeatLoader, Flex } from '@chakra-ui/react';
 import { useHistory } from "react-router-dom";
 
 
-
+// Defines the basic skeleton of main chat page and its operations
 const Chatpage = () => {
   const [fetchAgain, setFetchAgain] = useState(false);
   const { user } = ChatState();
