@@ -3,6 +3,8 @@ import {useHistory} from "react-router-dom";
 import { Heading, Button, Input, Box, Flex } from '@chakra-ui/react'
 import { useToast } from "@chakra-ui/toast";
 
+// On clicking the video call button this page pops up.
+// sends user to their respective rooms
 const Homepage_video = () => {
     const toast = useToast();
     const [value, setValue] = useState();
