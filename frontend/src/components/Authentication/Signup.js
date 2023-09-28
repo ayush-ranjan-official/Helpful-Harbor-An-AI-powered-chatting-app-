@@ -62,9 +62,9 @@ const Signup = () => {
       );
       console.log(data);
       toast({
-        title: "Registration Successful",
+        title: "Registration Successful, Please Refresh !",
         status: "success",
-        duration: 5000,
+        duration: 1000000,
         isClosable: true,
         position: "bottom",
       });
@@ -101,8 +101,8 @@ const Signup = () => {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("cloud_name", "dkyeeou9d");
+      fetch("https://api.cloudinary.com/v1_1/dkyeeou9d/image/upload", {
         method: "post",
         body: data,
       })
@@ -136,6 +136,8 @@ const Signup = () => {
         <Input
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
+          color='#4b0082' 
+          _placeholder={{ opacity: 1, color: 'inherit' }}
         />
       </FormControl>
       <FormControl id="email" isRequired>
@@ -144,6 +146,8 @@ const Signup = () => {
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
+          color='#4b0082' 
+          _placeholder={{ opacity: 1, color: 'inherit' }}
         />
       </FormControl>
       <FormControl id="password" isRequired>
@@ -153,9 +157,11 @@ const Signup = () => {
             type={show ? "text" : "password"}
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
+            color='#4b0082' 
+            _placeholder={{ opacity: 1, color: 'inherit' }}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" onClick={handleClick} colorScheme='red'>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -168,21 +174,26 @@ const Signup = () => {
             type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
+            color='#4b0082' 
+            _placeholder={{ opacity: 1, color: 'inherit' }}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" onClick={handleClick} colorScheme='red'>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="pic">
+      <FormControl colorScheme='red' id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
+          colorScheme='red'
           type="file"
           p={1.5}
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
+          color='#4b0082' 
+          _placeholder={{ opacity: 1, color: 'inherit' }}
         />
       </FormControl>
       <Button

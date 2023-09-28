@@ -21,6 +21,7 @@ const userSchema = mongoose.Schema(
   { timestaps: true }
 );
 
+// Below code uses bcryptjs to convert password to hash before pushing it to database
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };

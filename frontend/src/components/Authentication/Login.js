@@ -79,6 +79,8 @@ const Login = () => {
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
+          color='#4b0082' 
+          _placeholder={{ opacity: 1, color: 'inherit' }}
         />
       </FormControl>
       <FormControl id="password" isRequired>
@@ -86,12 +88,14 @@ const Login = () => {
         <InputGroup size="md">
           <Input
             value={password}
+            placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
-            placeholder="Enter password"
+            color='#4b0082' 
+            _placeholder={{ opacity: 1, color: 'inherit' }}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" onClick={handleClick} colorScheme='red'>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -108,7 +112,7 @@ const Login = () => {
       </Button>
       <Button
         variant="solid"
-        colorScheme="red"
+        colorScheme="purple"
         width="100%"
         onClick={() => {
           setEmail("guest@example.com");

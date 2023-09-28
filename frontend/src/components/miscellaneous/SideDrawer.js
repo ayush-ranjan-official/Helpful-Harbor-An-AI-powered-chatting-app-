@@ -134,7 +134,7 @@ function SideDrawer() {
         borderWidth="5px"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
-          <Button variant="ghost" onClick={onOpen}>
+          <Button variant="ghost" onClick={onOpen} bg='#CBC3E3'>
             <i className="fas fa-search"></i>
             <Text d={{ base: "none", md: "flex" }} px={4}>
               Search User
@@ -142,7 +142,7 @@ function SideDrawer() {
           </Button>
         </Tooltip>
         <Text fontSize="2xl" fontFamily="Work sans">
-          Talk-A-Tive
+          Helpful Harbor
         </Text>
         <div>
           <Menu>
@@ -197,7 +197,10 @@ function SideDrawer() {
           <DrawerBody>
             <Box d="flex" pb={2}>
               <Input
+                bg='#CBC3E3'
+                color='black'
                 placeholder="Search by name or email"
+                _placeholder={{ opacity: 1, color: 'inherit' }}
                 mr={2}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}

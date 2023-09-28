@@ -6,16 +6,43 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+const OpenAI = require("openai");
+const bodyParser = require("body-parser");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const cors = require("cors");
+
 
 dotenv.config();
 connectDB();
 const app = express();
 
-app.use(express.json()); // to accept json data
+app.use(express.json()); // to accept json data as we are taking input from fronten
+const port = 6000;
+app.use(bodyParser.json());
+app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.send("API Running!");
-// });
+const openai = new OpenAI({
+  apiKey: process.env.API_KEY  
+});
+
+
+app.post("/text", async (request, response) => {
+  const { chats } = request.body;
+  const chatCompletion = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: chats,
+  });
+
+  response.json({
+    output: chatCompletion.choices[0].message,
+  });
+});
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
+});
+
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
@@ -39,7 +66,7 @@ if (process.env.NODE_ENV === "production") {
 
 // --------------------------deployment------------------------------
 
-// Error Handling middlewares
+// Error Handling middlewares(in backend\middleware\errorMiddleware.js) : just to display proper errors if above api endpoints are not reached
 app.use(notFound);
 app.use(errorHandler);
 
@@ -54,7 +81,7 @@ const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
     origin: "http://localhost:3000",
-    // credentials: true,
+    
   },
 });
 

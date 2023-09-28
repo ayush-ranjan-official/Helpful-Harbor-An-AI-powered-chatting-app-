@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "http://localhost:5000"; // "https://Helpful-Harbor.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -201,7 +201,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             flexDir="column"
             justifyContent="flex-end"
             p={3}
-            bg="#E8E8E8"
+            bg="#CBC3E3"
             w="100%"
             h="100%"
             borderRadius="lg"
@@ -241,8 +241,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               )}
               <Input
                 variant="filled"
-                bg="#E0E0E0"
-                placeholder="Enter a message.."
+                bg="#D8BFD8"
+                color='black'
+                placeholder="Type a message here and hit Enter..."
+                _placeholder={{ opacity: 1, color: 'inherit' }}
                 value={newMessage}
                 onChange={typingHandler}
               />
