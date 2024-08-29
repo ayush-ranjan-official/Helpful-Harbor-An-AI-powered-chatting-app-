@@ -8,8 +8,6 @@ In our everyday lives, we often want to help others or make things better for ou
 Name: Ayush Ranjan
 College: IIT (ISM) Dhanbad 
 Branch: BTech. Mining Machinery Engineering (Department of Mechanical Engineering)
-Admission Number of institute: 21JE0215
-Position: Software Engineer Intern
 
 ```
 ## Features
